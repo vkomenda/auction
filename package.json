@@ -1,0 +1,28 @@
+{
+  "name": "@vkomenda/auction",
+  "scripts": {
+    "client:start": "ts-node client/main.ts",
+    "config:clean": "rm -rf config",
+    "program:build": "./program/do.sh build",
+    "program:clean": "./program/do.sh clean",
+    "cluster:devnet": "npm run config:clean && cp cluster-devnet.env .env",
+    "cluster:testnet": "npm run config:clean && cp cluster-testnet.env .env",
+    "cluster:mainnet-beta": "npm run config:clean && cp cluster-mainnet-beta.env .env"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^0.87.0",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/mkdirp": "^1.0.1",
+    "@types/mz": "^2.7.2",
+    "buffer-layout": "^1.2.0",
+    "dotenv": "8.2.0",
+    "json-to-pretty-yaml": "^1.2.2",
+    "mkdirp": "^1.0.4",
+    "mz": "^2.7.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
